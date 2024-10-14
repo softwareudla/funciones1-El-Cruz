@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "funciones.h"
 
-int opcion;
+    int opcion;
     char nombre[10][50];
     float precio[10];
     int contador=0;
@@ -49,6 +49,16 @@ void altoYbajo(){
     printf("El producto más barato es: %s\n", nombre[indicemin]);
     
 }
+void promedio(){
+    float suma, prom;
+    for (int i = 0; i < contador; i++)
+    {
+        suma += precio[i];
+    }
+    prom = suma / contador;
+    printf("El precio promedio de los productos es: %.2f\n", prom);
+    
+}
 
 
 int main(){
@@ -70,7 +80,7 @@ int main(){
         break;
 
     case 4:
-        
+        promedio();
         break;
 
     case 5:
@@ -81,7 +91,7 @@ int main(){
     default:
         break;
     }
-    }while(opcion < 5 && opcion >5);
+    }while(opcion < 5 && opcion > 0);
 
     return 0;
 }
