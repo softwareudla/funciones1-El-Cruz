@@ -50,12 +50,12 @@ void altoYbajo(){
     
 }
 
-float promedioPrecio(float precio[], int contador){
+void promedioPrecio(int contador){
     float j;
     for (int i = 0; i < contador; i++)
     {
         j+= precio[i];
     }
     float promedio= j/contador;
-    return promedio;    
+    printf("\nEl precio promedio de los productos es: %f", promedio);    
 }

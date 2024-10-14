@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "funciones.h"
 
-
-
 int main(){
     
     int opcion;
@@ -27,8 +25,7 @@ int main(){
         break;
 
     case 4:
-        float promedio = promedioPrecio();
-        printf("\nEl precio promedio de los productos es: %d", promedio);
+        promedioPrecio(contador);
         break;
 
     case 5:
