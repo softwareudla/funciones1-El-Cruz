@@ -26,7 +26,26 @@ void nuevoProducto(){
 
     contador++;
 }
+void encontrar() {
+    char buscap[50]; // Aumentar el tamaño a 50 para el nombre del producto
+    printf("Ingrese el producto del cual necesita información: ");
+    fflush(stdin);
+    fgets(buscap, 50, stdin);
+    buscap[strcspn(buscap, "\n")] = 0; // Quitar el salto de línea
 
+    int encontrado = 0;
+    for (int i = 0; i < contador; i++) {
+        if (strcmp(nombre[i], buscap) == 0) {
+            printf("El precio del producto %s es: %.2f\n", nombre[i], precio[i]);
+            encontrado = 1;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        printf("Producto no encontrado.\n");
+    }
+}
 
 void altoYbajo(){
     int max = 0, min = 1000;
@@ -73,14 +92,17 @@ int main(){
         break;
 
     case 2:
-       
+        encontrar();
+        printf("\n");
 
     case 3:
         altoYbajo();
+        printf("\n");
         break;
 
     case 4:
         promedio();
+        printf("\n");
         break;
 
     case 5:
