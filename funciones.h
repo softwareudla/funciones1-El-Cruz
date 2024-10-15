@@ -3,5 +3,6 @@
 
 void titulo();
 void nuevoProducto();
+void encontrar();
 void altoYbajo();
-void promedioPrecio(float precio[], int contador);
+void promedio();
