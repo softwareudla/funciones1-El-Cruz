@@ -28,8 +28,13 @@ int main(){
             promedio();
             printf("\n");
             break;
-
+        
         case 5:
+            todosProductos();
+            printf("\n");
+            break;
+
+        case 6:
             printf("\n\tCerrando programa...");
             printf("\n---------------------------------------------  ");
             break;

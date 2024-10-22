@@ -6,3 +6,4 @@ void nuevoProducto();
 void encontrar();
 void altoYbajo();
 void promedio();
+void todosProductos();

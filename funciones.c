@@ -14,7 +14,8 @@ void titulo(){
     printf("2. Buscar productos: \n");
     printf("3. Producto más caro y el más barato: \n");
     printf("4. Precio promedio: \n");
-    printf("5. Salir: \n");
+    printf("5. Ingresar todos los productos: \n");
+    printf("6. Salir: \n");
     
 }
 void nuevoProducto(){
@@ -27,6 +28,19 @@ void nuevoProducto(){
     scanf("%f", &precio[contador]);
 
     contador++;
+}
+void todosProductos(){
+    for (int i = 0; i < 10; i++) {
+        printf("Ingrese el nombre del producto %d: ", contador + 1);
+    fflush(stdin);
+    fgets(nombre[contador], 20, stdin);
+    nombre[contador][strcspn(nombre[contador], "\n")] = 0;
+
+    printf("Ingrese el precio: ");
+    scanf("%f", &precio[contador]);
+
+    contador++;
+    }
 }
 void encontrar() {
     char buscap[50];
