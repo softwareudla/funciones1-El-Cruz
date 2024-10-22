@@ -42,7 +42,7 @@ int main(){
         default:
             break;
         }
-    }while(opcion < 5 && opcion > 0);
+    }while(opcion < 6 && opcion > 0);
 
     return 0;
 }

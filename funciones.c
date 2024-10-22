@@ -30,6 +30,7 @@ void nuevoProducto(){
     contador++;
 }
 void todosProductos(){
+    if(contador<10){
     for (int i = 0; i < 10; i++) {
         printf("Ingrese el nombre del producto %d: ", contador + 1);
     fflush(stdin);
@@ -40,6 +41,8 @@ void todosProductos(){
     scanf("%f", &precio[contador]);
 
     contador++;
+    }}else{
+        printf("No hay espacio para ingresar mas productos\n");
     }
 }
 void encontrar() {
@@ -80,7 +83,7 @@ void altoYbajo(){
         indicemin = j;
         }
     }
-    printf("El producto más caro es: %s\n", nombre[indicemax]);
+    printf("\nEl producto más caro es: %s\n", nombre[indicemax]);
     printf("Su precio es: %.2f\n", precio[indicemax]);
     printf("\nEl producto más barato es: %s\n", nombre[indicemin]);
     printf("Su precio es: %.2f\n", precio[indicemin]);
